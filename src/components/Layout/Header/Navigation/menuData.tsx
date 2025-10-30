@@ -5,6 +5,7 @@ export const headerData: HeaderItem[] = [
   { label: "Profil", href: "/#", 
     submenu: [
       { label: "Profil Departemen", href: "/profile" },
+      { label: "Visi Misi", href: "/profile/visi" },
       { label: "Struktur Organisasi", href: "/profile/visi-misi" },
       { label: "Dosen", href: "/profil/struktur" },
       { label: "Staff", href: "/profil/struktur" },

@@ -8,8 +8,9 @@ import Newsletter from "@/components/Home/Newsletter";
 import { Metadata } from "next";
 import Information from "@/components/Home/Information";
 import Media from "@/components/Home/Media";
+
 export const metadata: Metadata = {
-  title: "Magister Fisip",
+  title: "Sosiologi",
   icons: {
     icon: "/favicon.ico", // atau .png/.svg
   },

@@ -3,13 +3,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import Header from "@/components/Profile/Header";
-import About from "@/components/Profile/about"; 
+import Visi from "@/components/Profile/visi"; 
 
 export const metadata = {
-  title: "Profil - Sosiologi",
+  title: "Visi Misi - Sosiologi",
 };
 
-export default function ProfilPage() {
+export default function VisiPage() {
   
 
   return (
@@ -20,7 +20,7 @@ export default function ProfilPage() {
         
       </div>
       <div>
-        <About />
+        <Visi />
       </div>
     </main>
   );

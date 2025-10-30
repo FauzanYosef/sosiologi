@@ -19,7 +19,7 @@ const config: Config = {
       },
       colors: {
         primary: "#004B23",
-        secondary: "#1a21bc",
+        secondary: "#C2E3CD",
         grey: "#57595f",
         slateGray: "#f6faff",
         deepSlate: "#d5effa",

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import Header from "@/components/Profile/Header";
-import About from "@/components/Profile/about"; 
+import About from "@/components/Profile/About"; 
 
 export const metadata = {
   title: "Profil - Sosiologi",

@@ -23,7 +23,7 @@ export default function Home() {
       <News />
       <Dekan />
       <Lecturer />
-      <Information />
+      {/* <Information /> */}
       <Companies />
       <Media/>
       <Newsletter />

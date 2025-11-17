@@ -192,4 +192,4 @@ const ProfilYayasan = () => {
   );
 };
 
-export default ProfilYayasan;
+export default ProfilDepartemen;

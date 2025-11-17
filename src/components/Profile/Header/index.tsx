@@ -46,7 +46,7 @@ const Profile = () => {
       {/* Header Image */}
       <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-md">
         <Image
-          src="/images/medsos/ig-01.png"
+          src="/images/profile/uin.jpg"
           alt="Gedung Departemen Sosiologi"
           fill
           className="object-cover"

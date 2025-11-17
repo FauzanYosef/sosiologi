@@ -32,6 +32,7 @@ const Visi = () => {
             </div>
             </div>
         </div>
+        
 
         {/* === Section Visi seperti testimonial === */}
         <div className="max-w-4xl mx-auto text-center py-16 px-6 relative">
@@ -53,8 +54,10 @@ const Visi = () => {
 
         </div>
 
+        <hr className="my-10 border-0 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+
         {/* === Section Misi === */}
-        <div className="max-w-4xl mx-auto text-center px-6 pb-20">
+        <div className="max-w-4xl mx-auto text-center px-6 pt-5 pb-20">
             <h4 className="text-2xl font-semibold text-gray-900 mb-4">Misi</h4>
             <ul className="text-gray-700 text-lg space-y-3 list-disc list-inside text-left inline-block">
             <li>

@@ -16,10 +16,14 @@ const Profile = () => {
     "profile": "Profile Departemen Sosiologi",
     "profile/visi": "Visi & Misi",
     "profile/struktur": "Struktur Organisasi",
-    "profile/dosen": "Dosen & Tenaga Kependidikan",
-    "profile/alumni": "Alumni",
+    "profile/dosen": "Dosen Sosiologi",
+    "tridharma/journal":"Jurnal Sosiologi",
+    "tridharma/riset":"Riset Sosiologi",
+    "tridharma/pkm":"Pengabdian Masyarakat",
+
     "berita": "Berita",
     "berita/detail": "Detail Berita",
+
   };
 
   // 🔹 Bentuk breadcrumb otomatis
@@ -44,7 +48,7 @@ const Profile = () => {
   return (
     <section className="mx-auto text-gray-700 leading-relaxed space-y-10 pb-1 pt-10">
       {/* Header Image */}
-      <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-md">
+      <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-md">
         <Image
           src="/images/profile/uin.jpg"
           alt="Gedung Departemen Sosiologi"

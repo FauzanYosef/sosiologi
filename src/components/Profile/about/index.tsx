@@ -14,7 +14,8 @@ import {
 
 import Breadcrumb from "@/components/Breadcrumb";
 
-const faqItems = [
+// ==== Tambahkan tipe pada array FAQ ====
+const faqItems: { q: string; a: string }[] = [
   {
     q: "Pertama, Memadukan Pendekatan Sosiologi Barat dan Timur",
     a: "Prodi ini menggabungkan keilmuan sosiologi dengan pendekatan teori sosiologi dari Barat dan Timur, khususnya Islam. Hal ini terlihat dari keberadaan mata kuliah seperti Sosiologi Timur Tengah, yang membuktikan komitmen prodi dalam memadukan beragam perspektif sosiologis."
@@ -37,10 +38,11 @@ const faqItems = [
   },
 ];
 
-const FAQSosiologi = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+// ==== FAQ Component TypeScript ====
+const FAQSosiologi: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggle = (i) => {
+  const toggle = (i: number) => {
     setOpenIndex(openIndex === i ? null : i);
   };
 
@@ -83,9 +85,10 @@ const FAQSosiologi = () => {
                 openIndex === i ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              <div className="px-5 pb-5 text-gray-700 leading-relaxed">
-                {item.a}
-              </div>
+              <div
+                className="px-5 pb-5 text-gray-700 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: item.a }}
+              />
             </div>
           </div>
         ))}
@@ -94,8 +97,7 @@ const FAQSosiologi = () => {
   );
 };
 
-
-const ProfilYayasan = () => {
+const ProfilDepartemen = () => {
   const breadcrumbLinks = [
     { href: "/", text: "Home" },
     { href: "/profil", text: "Profil Yayasan" },
@@ -131,6 +133,16 @@ const ProfilYayasan = () => {
       icon: <Briefcase className="w-10 h-10 text-primary" />,
       label: "Dosen dan Tendik",
       value: "60 Pegawai",
+    },
+    {
+      icon: <Briefcase className="w-10 h-10 text-primary" />,
+      label: "Alamat",
+      value: "Gedung FISIP Jl. AH Nasution No. 5  – Kampus 1 UIN Sunan Gunung Djati Bandung",
+    },
+    {
+      icon: <Briefcase className="w-10 h-10 text-primary" />,
+      label: "Akreditasi",
+      value: "Unggul",
     },
   ];
 

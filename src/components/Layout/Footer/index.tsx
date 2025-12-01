@@ -1,112 +1,95 @@
 import Link from "next/link";
-import Image from "next/image";
 import Logo from "../Header/Logo";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { headerData } from "../Header/Navigation/menuData";
 
-const footer = () => {
+const Footer = () => {
   return (
-    <footer className="bg-deepSlate py-10">
-      <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
-        <div className="grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
-          <div className='col-span-4 md:col-span-12 lg:col-span-4'>
+    <footer className="bg-deepSlate text-primary py-12">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+
+          {/* Logo & Social */}
+          <div className="md:col-span-4 flex flex-col justify-between h-full">
             <Logo />
-            <div className='flex items-center gap-4'>
-              <Link href="#" className='hover:text-primary text-black text-3xl'>
-                <Icon
-                  icon="tabler:brand-facebook"
-                />
+            <div className="flex gap-4 text-2xl mt-4">
+              <Link href="https://www.instagram.com/fisipuinsgd_official/" className="hover:text-primary transition-colors">
+                <Icon icon="tabler:brand-facebook" />
               </Link>
-              <Link href="#" className='hover:text-primary text-black text-3xl'>
-                <Icon
-                  icon="tabler:brand-twitter"
-                />
+              <Link href="https://www.instagram.com/fisipuinsgd_official/" className="hover:text-primary transition-colors">
+                <Icon icon="tabler:brand-twitter" />
               </Link>
-              <Link href="#" className='hover:text-primary text-black text-3xl'>
-                <Icon
-                  icon="tabler:brand-instagram"
-                />
+              <Link href="https://www.instagram.com/fisipuinsgd_official/" className="hover:text-primary transition-colors">
+                <Icon icon="tabler:brand-instagram" />
               </Link>
             </div>
           </div>
-          <div className="col-span-2">
-            <h3 className="mb-4 text-2xl font-medium">Links</h3>
-            <ul>
-              {headerData.map((item, index) => (
-                <li key={index} className="mb-2 text-black/50 hover:text-primary w-fit">
-                  <Link href={item.href}>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="col-span-2">
-            <h3 className="mb-4 text-2xl font-medium">Other</h3>
-            <ul>
-              <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
-                  About Us
-                </Link>
-              </li>
-              <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
-                  Our Team
-                </Link>
-              </li>
-              <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
-                  career
-                </Link>
-              </li>
-              <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
-                  Services
-                </Link>
-              </li>
-              <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className='col-span-4 md:col-span-4 lg:col-span-4'>
-            <div className="flex items-center gap-2">
-              <Icon
-                icon="tabler:brand-google-maps"
-                className="text-primary text-3xl inline-block me-2"
-              />
-              <h5 className="text-lg text-black/60">925 Filbert Street Pennsylvania 18072</h5>
+
+          {/* Navigation Links */}
+          <div className="md:col-span-4 grid grid-cols-2 gap-4">
+            {/* <div>
+              <h5 className="mb-3 font-semibold">Links</h5>
+              <ul className="space-y-2">
+                {headerData.map((item, idx) => (
+                  <li key={idx} className="hover:text-primary transition-colors">
+                    <Link href={item.href}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div> */}
+            <div>
+              <h5 className="mb-3 font-semibold">Quick Links</h5>
+              <ul className="space-y-2">
+                <li className="hover:text-black transition-colors text-sm "><Link href="#">Daftar PMB</Link></li>
+                <li className="hover:text-black transition-colors text-sm "><Link href="#">Brosur UIN SGD</Link></li>
+                <li className="hover:text-black transition-colors text-sm "><Link href="#">Jalur Seleksi</Link></li>
+                <li className="hover:text-black transition-colors text-sm "><Link href="#">Perkiraan Biaya Studi</Link></li>
+                <li className="hover:text-black transition-colors text-sm "><Link href="#">Beasiswa</Link></li>
+              </ul>
             </div>
-            <div className="flex gap-2 mt-10">
-              <Icon
-                icon="tabler:phone"
-                className="text-primary text-3xl inline-block me-2"
-              />
-              <h5 className="text-lg text-black/60">+45 3411-4411</h5>
+          </div>
+
+          {/* Contact Info */}
+          <div className="md:col-span-4 flex flex-col gap-6">
+            {/* Alamat */}
+            <div className="flex gap-3 items-start">
+              <div className="flex-shrink-0">
+                <Icon icon="tabler:brand-google-maps" className="text-primary text-2xl mt-1" />
+              </div>
+              <div className="text-primary text-sm leading-relaxed">
+                <span className="font-semibold">Kampus I UIN SGD Bandung</span>
+                <br />
+                Jalan A.H. Nasution No. 105, Cipadung, Cibiru, Kota Bandung, Jawa Barat 40614
+              </div>
             </div>
-            <div className="flex gap-2 mt-10">
-              <Icon
-                icon="tabler:folder"
-                className="text-primary text-3xl inline-block me-2"
-              />
-              <h5 className="text-lg text-black/60">info@gmail.com</h5>
+
+            {/* Telepon */}
+            <div className="flex gap-3 items-center">
+              <Icon icon="tabler:phone" className="text-primary text-2xl" />
+              <span className="text-primary text-sm">+45 3411-4411</span>
+            </div>
+
+            {/* Email */}
+            <div className="flex gap-3 items-center">
+              <Icon icon="tabler:folder" className="text-primary text-2xl" />
+              <span className="text-primary text-sm">info@gmail.com</span>
             </div>
           </div>
         </div>
 
-        <div className='mt-10 lg:flex items-center justify-between'>
-          {/* <h4 className='text-black/50 text-sm text-center lg:text-start font-normal'>fis <Link href="https://getnextjstemplates.com/" target="_blank" className="hover:text-primary"> GetNextJsTemplates.com</Link></h4> */}
-          <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start">
-            <Link href="/" className='text-black/50 text-sm font-normal hover:text-primary'>Privacy policy</Link>
-            <Link href="/" className='text-black/50 text-sm font-normal hover:text-primary'>Terms & conditions</Link>
+        {/* Bottom */}
+        <div className="mt-10 flex flex-col md:flex-row justify-between items-center text-sm text-primary gap-3">
+          <div className="flex gap-4">
+            <Link href="/" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/" className="hover:text-primary transition-colors">Terms & Conditions</Link>
           </div>
-          <h4 className='text-black/50 text-sm text-center lg:text-start font-normal'>Development by <Link href="https://fisip.uinsgd.ac.id" target="_blank" className="hover:text-primary"> Fisip UIN Bandung</Link></h4>
+          <div>
+            Development by <Link href="https://fisip.uinsgd.ac.id" target="_blank" className="hover:text-primary transition-colors">FISIP UIN Bandung</Link>
+          </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default footer;
+export default Footer;
